@@ -1,0 +1,46 @@
+.home-wrapper {
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+}
+
+.entertainer-card {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+  color: white;
+}
+
+.entertainer-card:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #4e54c8;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3d40a0;
+}
+
+.btn-success {
+  background-color: #29b982;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #239c6f;
+}

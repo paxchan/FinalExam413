@@ -1,0 +1,125 @@
+/* ========= LANDING PAGE STYLES ========= */
+
+.landing-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-left,
+.landing-right {
+  height: 100%;
+}
+
+.landing-left {
+  flex: 0.8;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-images {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+.landing-right {
+  flex: 1.2;
+  background-color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: url("/images/stars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.logo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: white;
+  max-width: 80%;
+}
+
+.find-talent-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.find-talent-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.logo-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

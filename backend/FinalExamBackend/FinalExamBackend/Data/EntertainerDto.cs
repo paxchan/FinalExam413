@@ -1,0 +1,19 @@
+namespace FinalExamBackend.Data;
+
+public class EntertainerDto
+{
+    public int EntertainerId { get; set; }
+    public string? EntStageName { get; set; }
+    public string? EntSsn { get; set; }
+    public string? EntStreetAddress { get; set; }
+    public string? EntCity { get; set; }
+    public string? EntState { get; set; }
+    public string? EntZipCode { get; set; }
+    public string? EntPhoneNumber { get; set; }
+    public string? EntWebPage { get; set; }
+    public string? EntEmailAddress { get; set; }
+    public DateOnly? DateEntered { get; set; }
+
+    public int BookingCount { get; set; }
+    public DateOnly? LastBookingDate { get; set; }
+}

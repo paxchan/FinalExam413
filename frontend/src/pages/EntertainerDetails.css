@@ -1,0 +1,30 @@
+.details-wrapper {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.entertainer-details-card {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  color: white;
+}
+
+.entertainer-details-card a {
+  color: #29b982;
+  text-decoration: none;
+}
+
+.entertainer-details-card a:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 1.2rem;
+}

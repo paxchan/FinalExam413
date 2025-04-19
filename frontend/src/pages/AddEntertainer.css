@@ -1,0 +1,14 @@
+.add-wrapper {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.add-form-card {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}

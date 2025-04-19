@@ -1,0 +1,90 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Entertainer } from "../types/Entertainer";
+import { addEntertainer } from "../api/EntertainersAPI";
+import { Button, Container, Form, Card } from "react-bootstrap";
+import TopAppBar from "../components/TopAppBar";
+import "./AddEntertainer.css";
+
+const AddEntertainer = () => {
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState<Partial<Entertainer>>({
+    entStageName: "",
+    entSsn: "",
+    entStreetAddress: "",
+    entCity: "",
+    entState: "",
+    entZipCode: "",
+    entPhoneNumber: "",
+    entWebPage: "",
+    entEmailAddress: "",
+    dateEntered: new Date().toISOString().split("T")[0],
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const newEntertainer = await addEntertainer(form as Entertainer);
+      navigate(`/entertainers/${newEntertainer.entertainerId}`);
+    } catch (error) {
+      alert("Failed to add entertainer.");
+    }
+  };
+
+  return (
+    <div className="add-wrapper">
+      <TopAppBar />
+      <Container className="py-5">
+        <Card className="add-form-card">
+          <Card.Body>
+            <h2 className="mb-4">Add New Entertainer</h2>
+            <Form onSubmit={handleSubmit}>
+              {[
+                { label: "Stage Name", name: "entStageName" },
+                { label: "SSN", name: "entSsn" },
+                { label: "Street Address", name: "entStreetAddress" },
+                { label: "City", name: "entCity" },
+                { label: "State", name: "entState" },
+                { label: "Zip Code", name: "entZipCode" },
+                { label: "Phone Number", name: "entPhoneNumber" },
+                { label: "Web Page", name: "entWebPage" },
+                { label: "Email Address", name: "entEmailAddress" },
+                { label: "Date Entered", name: "dateEntered", type: "date" },
+              ].map(({ label, name, type = "text" }) => (
+                <Form.Group className="mb-3" key={name}>
+                  <Form.Label>{label}</Form.Label>
+                  <Form.Control
+                    type={type}
+                    name={name}
+                    value={form[name as keyof Entertainer] || ""}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
+              ))}
+
+              <div className="d-flex justify-content-between">
+                <Button variant="secondary" onClick={() => navigate("/main")}>
+                  Cancel
+                </Button>
+                <Button type="submit" variant="success">
+                  Add Entertainer
+                </Button>
+              </div>
+            </Form>
+          </Card.Body>
+        </Card>
+      </Container>
+    </div>
+  );
+};
+
+export default AddEntertainer;
