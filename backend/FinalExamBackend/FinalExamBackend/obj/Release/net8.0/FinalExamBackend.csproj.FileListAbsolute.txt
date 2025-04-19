@@ -259,3 +259,4 @@
 /Users/test/RiderProjects/FinalExam/backend/FinalExamBackend/FinalExamBackend/obj/Release/net8.0/FinalExamBackend.genruntimeconfig.cache
 /Users/test/RiderProjects/FinalExam/backend/FinalExamBackend/FinalExamBackend/obj/Release/net8.0/ref/FinalExamBackend.dll
 /Users/test/RiderProjects/FinalExam/backend/FinalExamBackend/FinalExamBackend/bin/Release/net8.0/EntertainmentAgencyExample.sqlite
+/Users/test/RiderProjects/FinalExam/backend/FinalExamBackend/FinalExamBackend/obj/Release/net8.0/FinalExamBackend.sourcelink.json
